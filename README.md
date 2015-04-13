@@ -68,4 +68,4 @@ The results are organized into the following subdirectories:
 
 
 This script is designed to run on the GLBRC scarcity servers 6-10.
-See Mike Place for problems with this script.
+
