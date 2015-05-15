@@ -486,13 +486,13 @@ def replaceWig( cwd ):
 def main():
     
     cmdparser = argparse.ArgumentParser(description="RNA-Seq alignment, HTSeq & RPKM pipeline.",
-                                        usage='%(prog)s -f <fastq file list.txt> [optional args: -r -d ]' ,prog='rnaSeqPipelineGLBRC.py'  )
+                                        usage='%(prog)s -f <fastq file list.txt> [optional args: -a -r -d -ref ]' ,prog='rnaSeqPipelineGLBRC.py'  )
     cmdparser.add_argument('-f', '--file',    action='store', dest='FILE',    help='Text file, one fastq file name per line.')
     cmdparser.add_argument('-r', '--reverse', action='store_true', dest='REVERSE', help='HTSeq -s reverse, for Biotech GEC data, optional.')
     cmdparser.add_argument('-d', '--detail',  action='store_true', dest='DETAIL',  help='Print a more detailed description of program.')
     cmdparser.add_argument('-a', '--aligner',  action='store', dest='ALIGNER', help='Default aligner is Bowtie2, to use Bwa mem: -a bwamem')
     cmdparser.add_argument('-ref', '--reference', action='store', dest='REFERENCE', help='To Change default (SGD R64-1-1) reference: -ref Y22-3 ')
-    cmdparser.add_argument('-trim', '--trimAs', action='store_true', dest='TRIM', help='Trim consecutive 3 prime A\'s from reads ')
+#    cmdparser.add_argument('-trim', '--trimAs', action='store_true', dest='TRIM', help='Trim consecutive 3 prime A\'s from reads ')
     cmdResults = vars(cmdparser.parse_args())
         
     fastq = []                      # list of fastq files to process
